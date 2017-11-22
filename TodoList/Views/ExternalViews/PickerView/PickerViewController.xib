@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickerViewController">
+            <connections>
+                <outlet property="doneButton" destination="dBV-4g-8VD" id="KjO-dq-vKF"/>
+                <outlet property="overlayView" destination="Rph-9H-wzk" id="bzg-iy-NPt"/>
+                <outlet property="pickerBottomConstraint" destination="oNZ-y2-OGw" id="9ay-pK-TWl"/>
+                <outlet property="pickerView" destination="aJh-fe-OzA" id="8Qv-d4-ZoA"/>
+                <outlet property="view" destination="Nta-2s-rjq" id="CDN-Ve-M34"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Nta-2s-rjq">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rph-9H-wzk">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1E-ff-h2k">
+                    <rect key="frame" x="0.0" y="667" width="375" height="206"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTk-Uo-IhH">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="fLw-YU-Jzm"/>
+                            </constraints>
+                            <items>
+                                <barButtonItem title="Cancel" id="BOc-bL-chd">
+                                    <connections>
+                                        <action selector="onCancelTapped:" destination="-1" id="90u-Zb-LE4"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="5K9-OU-pJf"/>
+                                <barButtonItem style="done" systemItem="done" id="dBV-4g-8VD">
+                                    <connections>
+                                        <action selector="onDoneTapped:" destination="-1" id="dOO-NC-40O"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-fe-OzA">
+                            <rect key="frame" x="0.0" y="44" width="375" height="162"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="162" id="mCs-MP-eEQ"/>
+                            </constraints>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="ZTk-Uo-IhH" firstAttribute="top" secondItem="G1E-ff-h2k" secondAttribute="top" id="26J-23-Sst"/>
+                        <constraint firstItem="aJh-fe-OzA" firstAttribute="top" secondItem="ZTk-Uo-IhH" secondAttribute="bottom" id="GSR-6c-26A"/>
+                        <constraint firstAttribute="trailing" secondItem="ZTk-Uo-IhH" secondAttribute="trailing" id="V3x-75-gh9"/>
+                        <constraint firstAttribute="height" constant="206" id="Vka-vP-Bwm"/>
+                        <constraint firstItem="aJh-fe-OzA" firstAttribute="leading" secondItem="G1E-ff-h2k" secondAttribute="leading" id="fTf-rE-UCG"/>
+                        <constraint firstAttribute="trailing" secondItem="aJh-fe-OzA" secondAttribute="trailing" id="qDB-9i-ryV"/>
+                        <constraint firstItem="ZTk-Uo-IhH" firstAttribute="leading" secondItem="G1E-ff-h2k" secondAttribute="leading" id="yVv-TC-wdK"/>
+                        <constraint firstAttribute="bottom" secondItem="aJh-fe-OzA" secondAttribute="bottom" id="yWN-x1-J0e"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Rph-9H-wzk" firstAttribute="top" secondItem="Nta-2s-rjq" secondAttribute="top" id="0i0-Vd-eL9"/>
+                <constraint firstAttribute="trailing" secondItem="Rph-9H-wzk" secondAttribute="trailing" id="4CG-vQ-nXn"/>
+                <constraint firstAttribute="trailing" secondItem="G1E-ff-h2k" secondAttribute="trailing" id="Dnt-bh-A9U"/>
+                <constraint firstItem="G1E-ff-h2k" firstAttribute="leading" secondItem="Nta-2s-rjq" secondAttribute="leading" id="SaT-Mi-VyU"/>
+                <constraint firstItem="Rph-9H-wzk" firstAttribute="leading" secondItem="Nta-2s-rjq" secondAttribute="leading" id="W8Z-XF-4zD"/>
+                <constraint firstAttribute="bottom" secondItem="G1E-ff-h2k" secondAttribute="bottom" constant="-206" id="oNZ-y2-OGw"/>
+                <constraint firstAttribute="bottom" secondItem="Rph-9H-wzk" secondAttribute="bottom" id="yQY-F8-8nA"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
